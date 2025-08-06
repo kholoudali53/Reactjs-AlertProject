@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Ban, Bell, CheckCheck, Info } from 'lucide-react';
 import './App.css'
+import Alert from './Components/UI/Alert/Alert'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    
+      <div style={{margin: "2rem"}}>
 
-export default App
+      <div>
+        <Alert type={"alert-default"} icon= {<Bell size={20} />} title={"Upgrade your plan"} >
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nobis aliquid explicabo, quae 
+          <a href="/">maiores</a> 
+          architecto neque dolore cupiditate quos ad.
+        </p>
+        </Alert>
+      </div>
+
+      <div>
+        <Alert type={"alert-info"} icon= {<Info size={20} />} title={"Note"} 
+        desc= "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nobis aliquid explicabo, quae maiores architecto neque dolore cupiditate quos ad."/>
+      </div>
+
+      <div>
+        <Alert type={"alert-success"} icon= {<CheckCheck size={20} />} title={"Your order has been processed"} 
+        desc= "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nobis aliquid explicabo, quae maiores architecto neque dolore cupiditate quos ad."/>
+      </div>
+
+      <div>
+        <Alert type={"alert-error"} icon= {<Ban size={20} />} title={"Something Went Wrong"} 
+        desc= "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nobis aliquid explicabo, quae maiores architecto neque dolore cupiditate quos ad."/>
+      </div>
+
+      <div>
+        <Alert type={"alert-warning"} icon= {<Ban size={20} />} title={"Tips & Tricks"} 
+        desc= "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nobis aliquid explicabo, quae maiores architecto neque dolore cupiditate quos ad."/>
+      </div>
+
+      
+
+      </div>
+  );
+};
+
+export default App;
